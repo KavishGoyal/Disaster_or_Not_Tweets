@@ -1,0 +1,44 @@
+ 
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Tweet Sentiment Detector</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+		<div class="container">
+			<h2 class='container-heading'><span>Tweet Detector</span> for Tweets </h2>
+	        	<div class='description'>
+				<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+			</div>
+		</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='Danger'>Gotcha! This is a DISASTER tweet.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='Disaster.webp') }}" alt="Disaster Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='Safe'>Great! This is NOT a disaster tweet.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='not-disaster.webp') }}" alt="Not a disaster image">
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/kvtheckrock/Tweet_Disaster_or_NOt"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/kavishgoyal"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>Made with ❤️ by Anuj Vyas.</p>
+        </div>
+
+	</body>
+</html>

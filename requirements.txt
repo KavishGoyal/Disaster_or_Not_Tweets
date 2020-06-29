@@ -11,4 +11,5 @@ matplotlib>=1.4.3
 pandas>=0.19
 nltk>=3.4.5
 seaborn>=0.10.1
-pickle>=2.0
+string
+pickle

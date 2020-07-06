@@ -12,4 +12,5 @@ pandas>=0.19
 nltk>=3.4.5
 seaborn
 wordcloud
-
+string>=1.2.0
+pickle>=2.0.0

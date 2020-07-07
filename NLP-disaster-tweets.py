@@ -257,13 +257,7 @@ example_train_vectors = count_vectorizer.fit_transform(train_df["text"][0:5])
 print(example_train_vectors[0].todense().shape)
 print(example_train_vectors[0].todense())
 ## Our vectors are really big, so we want to push our model's weights
-## toward 0 without completely discounting different words - ridge regression 
-## is a good way to do this.
-clf = linear_model.RidgeClassifier()
-scores = model_selection.cross_val_score(clf, train_vectors, train_df["target"], cv=3, scoring="f1")
-scores
-clf.fit(train_vectors, train_df["target"])## Our vectors are really big, so we want to push our model's weights
-## toward 0 without completely discounting different words - ridge regression 
+## toward 0 without completely discounting different words - ridge classifier 
 ## is a good way to do this.
 clf = linear_model.RidgeClassifier()
 scores = model_selection.cross_val_score(clf, train_vectors, train_df["target"], cv=3, scoring="f1")

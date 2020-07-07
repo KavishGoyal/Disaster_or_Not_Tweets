@@ -10,7 +10,7 @@ import sklearn as skl
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import feature_extraction, linear_model, model_selection, preprocessing
-import string 
+
 
 from wordcloud import STOPWORDS
 
